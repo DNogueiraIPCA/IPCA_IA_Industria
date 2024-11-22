@@ -38,7 +38,10 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 # Passo 4: Treinar o modelo
-history = model.fit(x_train, y_train_cat, epochs=10, validation_split=0.2)
+history = model.fit(x_train,
+                    y_train_cat, 
+                    epochs=10, 
+                    validation_split=0.2)
 
 # Passo 5: Avaliar o modelo
 test_loss, test_acc = model.evaluate(x_test, y_test_cat)
